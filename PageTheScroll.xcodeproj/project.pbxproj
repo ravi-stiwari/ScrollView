@@ -96,7 +96,7 @@
 				TargetAttributes = {
 					78B5B70E1E6B3826001FF722 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 5H62JGDF9D;
+						DevelopmentTeam = JRAMBAKZPX;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -261,7 +261,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5H62JGDF9D;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JRAMBAKZPX;
 				INFOPLIST_FILE = PageTheScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.study.Project.PageTheScroll;
@@ -274,7 +275,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5H62JGDF9D;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JRAMBAKZPX;
 				INFOPLIST_FILE = PageTheScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.study.Project.PageTheScroll;
