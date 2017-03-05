@@ -10,8 +10,17 @@ import UIKit
 
 class MainVC: UIViewController {
 
+    var images = [UIImageView]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for x in 0...2{
+            let image = UIImage(named: "icon\(x).png")
+            images.append(UIImageView(image: image))
+        }
+        
+        print("Count : \(images.count)")
     }
 
 }
