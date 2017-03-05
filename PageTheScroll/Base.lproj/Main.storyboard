@@ -13,7 +13,7 @@
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="PageTheScroll" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="PageTheScroll" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -32,28 +32,33 @@
                                 <rect key="frame" x="0.0" y="468" width="320" height="100"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aax-xP-vQp">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="35" y="209" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="icc-lh-ZQX"/>
+                                    <constraint firstAttribute="width" constant="250" id="lZp-Ba-Pc1"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="gK1-6l-9sO" secondAttribute="trailing" constant="50" id="8IQ-hJ-xN9"/>
-                            <constraint firstItem="Aax-xP-vQp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9Kf-BO-asX"/>
                             <constraint firstItem="g63-Yt-iZt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EeJ-59-KXV"/>
                             <constraint firstItem="FUK-Iq-OsG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="L8l-pq-ufe"/>
-                            <constraint firstItem="Aax-xP-vQp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PaR-yB-FFQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gK1-6l-9sO" secondAttribute="trailing" constant="50" id="Pfd-0Y-FVU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aax-xP-vQp" secondAttribute="bottom" id="Rmh-BN-LwN"/>
                             <constraint firstAttribute="trailing" secondItem="FUK-Iq-OsG" secondAttribute="trailing" id="S3V-Yt-rxX"/>
+                            <constraint firstItem="Aax-xP-vQp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SMr-Fs-o1W"/>
                             <constraint firstItem="g63-Yt-iZt" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="aax-SZ-0iB"/>
+                            <constraint firstItem="Aax-xP-vQp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="esJ-Gw-XOr"/>
                             <constraint firstItem="gK1-6l-9sO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="fbw-th-QBt"/>
                             <constraint firstItem="g63-Yt-iZt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="gxm-TV-xXd"/>
-                            <constraint firstAttribute="trailing" secondItem="Aax-xP-vQp" secondAttribute="trailing" id="rs8-6l-QKq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FUK-Iq-OsG" secondAttribute="bottom" id="t4k-L0-ZC8"/>
                             <constraint firstItem="gK1-6l-9sO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="tdw-DC-HUW"/>
                             <constraint firstItem="g63-Yt-iZt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vkz-Pt-TB3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Aax-xP-vQp" id="1hS-qp-Hok"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
