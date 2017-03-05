@@ -16,6 +16,14 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        self.view.addGestureRecognizer(swipeLeft)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -36,5 +44,23 @@ class MainVC: UIViewController {
         scrollView.clipsToBounds = false
         scrollView.contentSize = CGSize(width: contentWidth, height: 150)
     }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.right:
+                if((scrollView.contentOffset.x - scrollView.frame.size.width) >= 0){
+                    scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x - 250, y: scrollView.frame.size.height - 150), animated: true)
+                }
+                break
+            case UISwipeGestureRecognizerDirection.left:
+                if((scrollView.contentOffset.x + scrollView.frame.size.width) < scrollView.contentSize.width) {
+                    scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x + 250, y: scrollView.frame.size.height - 150), animated: true)
+                }
+                break
+            default:
+                break
+            }
+        }
+    }
 }
-
